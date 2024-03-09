@@ -2,6 +2,10 @@ const sections = document.querySelectorAll('.section');
 const sectBtns = document.querySelectorAll('.controls .control');
 const sectBtn = document.querySelectorAll('.control');
 const allSections = document.querySelectorAll('.main-content .section');
+  const form = document.querySelector('.contact-form');
+const nameInput = document.querySelector('#name');
+const submitBtn = document.querySelector('#submit-btn');
+const welcomeMessage = document.querySelector('#welcome-message');
 
 (function () {
     [...document.querySelectorAll(".control")].forEach(button => {
@@ -15,4 +19,11 @@ const allSections = document.querySelectorAll('.main-content .section');
     document.querySelector(".theme-btn").addEventListener("click", () => {
         document.body.classList.toggle("light-mode");
     })
+
+  
+
+form.addEventListener('submit', (e) => {
+  e.preventDefault();
+  welcomeMessage.textContent = `Welcome to my webpage, ${nameInput.value}!`;
+});
 })();
