@@ -70,18 +70,43 @@ section{
 .sec2{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: slateblue;
 
 }
 .sec3{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: rgb(168, 163, 110);
 
 }
 .sec4{
     display: none;
     transform: translateY(0) scale(1);
+    background-color: rgb(56, 30, 76);
 
 }
+
+.sec5{
+    display:none;
+    transform: translateY(0) scale(1);
+
+
+}
+
+.active {
+    display: block;
+    animation: scaleanim 1s ease-in-out;
+
+    @keyframes scaleanim {
+        0%{
+            transform: scaleY(0);
+        }
+        100%{
+            transform: scaleY(1);
+        }
+    }
+}
+
 
 
 .controls{
